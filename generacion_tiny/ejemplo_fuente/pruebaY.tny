@@ -1,0 +1,7 @@
+z:=8;
+x:=2;
+if z<x+3  then
+  write z
+else
+  write x
+end

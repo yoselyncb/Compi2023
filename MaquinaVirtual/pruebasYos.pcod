@@ -1,0 +1,28 @@
+;                          -> Inicio de código
+
+LDA 0        ;cargar direccion de identificador: x
+LDC 3        ;cargar constante: 3
+STO            ;asignacion: almaceno el valor para el id x
+LDA 1        ;cargar direccion de identificador: y
+LDC 2        ;cargar constante: 2
+STO            ;asignacion: almaceno el valor para el id y
+;                          -> leer
+
+LDA 1        ;cargar direccion de identificador: y
+RDI            ;leer el valor para el identificador y
+;                          <- leer
+
+LDA 0        ;cargar direccion de identificador: x
+LOD 1        ;cargar valor de identificador: y
+LDC 5        ;cargar constante: 5
+ADI            ;Operación suma: +
+STO            ;asignacion: almaceno el valor para el id x
+;                          -> escribir
+
+LOD 0        ;cargar valor de identificador: x
+WRI            ;escribir valor del tope
+;                          <- escribir
+
+STP            ;finaliza el código
+;                          <- Fin de código
+

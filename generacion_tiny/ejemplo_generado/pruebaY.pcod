@@ -1,0 +1,28 @@
+;                          -> Inicio de código
+
+LDA 0        ;cargar direccion de identificador: z
+LDC 8        ;cargar constante: 8
+STO            ;asignacion: almaceno el valor para el id z
+LDA 1        ;cargar direccion de identificador: x
+LDC 2        ;cargar constante: 2
+STO            ;asignacion: almaceno el valor para el id x
+;                          -> if
+
+LOD 1        ;cargar valor de identificador: x
+LDC 3        ;cargar constante: 3
+ADI            ;Operación suma: +
+LOD 0        ;cargar valor de identificador: z
+GRT            ;A mayor que B: B<A
+FJP 16        ;if false: jmp hacia else
+LOD 0        ;cargar valor de identificador: z
+WRI            ;escribir valor del tope
+UJP 19        ;definicion label ujp
+LAB 16        ;definicion label jmp
+LOD 1        ;cargar valor de identificador: x
+WRI            ;escribir valor del tope
+LAB 19        ;definicio label ujp
+;                          <- if
+
+STP            ;finaliza el código
+;                          <- Fin de código
+
